@@ -1,0 +1,205 @@
+<!doctype html>
+
+<html>
+    <head>
+        <title>ウシジマのパン屋</title>
+        <link href="main.css" rel="stylesheet">
+    </head>
+    <body scroll="no">
+        <div class="game-container">
+            <div class="left-menu">
+                <h2 class="level">Lv.<span id="level">1</span></h2>
+                <p class="level-up-num"><span id="sold">0</span>/<span id="level-up">3</span></p>
+                <br/>
+                <p class="money">所持金: <br/> Ü <span id="money1"></span></p>
+            </div>
+            
+            <div class="game-main">
+                <div id="log-range" class="game-log-range"></div>
+                
+                <div class="tab-1">
+                    <label>
+                        <input type="radio" name="tab-1" checked>
+                        材料
+                    </label>
+                    <div>
+                        <p id="table1-1_elm">
+                            <span id="table1-1_name"></span>: <span id="table1-1_num"></span>個
+                        </p>
+                        
+                        <p id="table1-2_elm">
+                            <span id="table1-2_name"></span>: <span id="table1-2_num"></span>個
+                        </p>
+                        
+                        <p id="table1-3_elm">
+                            <span id="table1-3_name"></span>: <span id="table1-3_num"></span>個
+                        </p>
+                        
+                        <p id="table1-4_elm">
+                            <span id="table1-4_name"></span>: <span id="table1-4_num"></span>個
+                        </p>
+                        
+                        <p id="table1-5_elm">
+                            <span id="table1-5_name"></span>: <span id="table1-5_num"></span>個
+                        </p>
+                        
+                        <p id="table1-6_elm">
+                            <span id="table1-6_name"></span>: <span id="table1-6_num"></span>個
+                        </p>
+                        
+                        <p id="table1-7_elm">
+                            <span id="table1-7_name"></span>: <span id="table1-7_num"></span>個
+                        </p>
+                        
+                        <p id="table1-8_elm">
+                            <span id="table1-8_name"></span>: <span id="table1-8_num"></span>個
+                        </p>
+                        
+                        <p id="table1-9_elm">
+                            <span id="table1-9_name"></span>: <span id="table1-9_num"></span>個
+                        </p>
+                    </div>
+                    
+                    <label>
+                        <input type="radio" name="tab-1">
+                        パン
+                    </label>
+                    <div>
+                        <p id="table2-1_elm">
+                            <span id="table2-1_name"></span>: <span id="table2-1_num"></span>個
+                        </p>
+                        <p id="table2-2_elm">
+                            <span id="table2-2_name"></span>: <span id="table2-2_num"></span>個
+                        </p>
+                        <p id="table2-3_elm">
+                            <span id="table2-3_name"></span>: <span id="table2-3_num"></span>個
+                        </p>
+                        <p id="table2-4_elm">
+                            <span id="table2-4_name"></span>: <span id="table2-4_num"></span>個
+                        </p>
+                        <p id="table2-5_elm">
+                            <span id="table2-5_name"></span>: <span id="table2-5_num"></span>個
+                        </p>
+                        <p id="table2-6_elm">
+                            <span id="table2-6_name"></span>: <span id="table2-6_num"></span>個
+                        </p>
+                        <p id="table2-7_elm">
+                            <span id="table2-7_name"></span>: <span id="table2-7_num"></span>個
+                        </p>
+                        <p id="table2-8_elm">
+                            <span id="table2-8_name"></span>: <span id="table2-8_num"></span>個
+                        </p>
+                        <p id="table2-9_elm">
+                            <span id="table2-9_name"></span>: <span id="table2-9_num"></span>個
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-menu">
+
+                <div class="modal_wrap1">
+                    <input type="radio" id="modal_open1" class="modal_open-input1" name="modal_trigger"/>
+                    <label for="modal_open1" class="modal_open-label1">
+                        <img src="img/track.png" class="button-img" />
+                    </label>
+                    <input type="radio" id="modal_close1" name="modal_trigger"/>
+                    <div class="modal1">
+                        <div class="modal_content-wrap1">
+                            <label for="modal_close1" class="modal_close-label">×</label>
+                            
+                            <button id="buy-left" class="to_left">◀</button>
+                            <button id="buy-right" class="to_right">▶</button>
+                            
+                            <div class="modal_content1">
+                                <div class="content-area">
+                                    <h2 id="content1">小麦</h2>
+                                    <img src="img/komugi.png" id="img1" class="content-img"/>
+                                    <h3 style="margin-bottom: 3px">値段: Ü <span id="nedan"></span></h3>
+                                    <h3 style="margin: 0">所持数: <span id="buy-have"></span></h3>
+                                </div>
+                                
+                                <div class="buy-area">
+                                    <div>所持金: Ü <span id="money2"></span></div>
+                                    <div style="display: flex; margin-top: 20px">
+                                        <button id="buy1" class="buy-button">1個買う</button>
+                                        <button id="buy10" class="buy-button">10個買う</button>
+                                        <button id="buyAll" class="buy-button">買えるだけ<br/>買う</button>
+                                    </div>
+                                    <div style="display: flex; margin-top: 10px">
+                                        <button id="sell1" class="buy-button">1個売る</button>
+                                        <button id="sell10" class="buy-button">10個売る</button>
+                                        <button id="sellAll" class="buy-button">売れるだけ<br/>売る</button>
+                                    </div>
+                                    <h3 id="buyOpenLvElm">解放レベル: Lv. <span id="buyOpenLv"></span></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="modal_close1">
+                            <div class="modal_background1"></div>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="modal_wrap2">
+                    <input type="radio" id="modal_open2" class="modal_open-input2" name="modal_trigger"/>
+                    <label for="modal_open2" class="modal_open-label2">
+                        <img src="img/bread.png" class="button-img" />
+                    </label>
+                    <input type="radio" id="modal_close2" name="modal_trigger"/>
+                    <div class="modal2">
+                        <div class="modal_content-wrap2">
+                            <label for="modal_close2" class="modal_close-label">×</label>
+
+                            <button id="make-left" class="to_left">◀</button>
+                            <button id="make-right" class="to_right">▶</button>
+                            
+                            <div class="modal_content2">
+                                <div class="content-area">
+                                    <h2 id="content2">パン</h2>
+                                    <img src="img/pan.png" id="img2" class="content-img"/>
+                                    <h3 style="margin-bottom: 0">収入: Ü <span id="income"></span></h3>
+                                    <h3 style="margin: 0">所持数: <span id="make-have"></span></h3>
+                                </div>
+                                <div class="make-area">
+                                    <div class="ingredient-area">
+                                        <div id="ing1">
+                                            <div style="align-items: center; display: flex">
+                                                <img src="img/komugi.png" id="ing1-img" class="ingredient-img"/>
+                                                &nbsp;<span id="ing1-have">0</span>/<span id="ing1-need">1</span> 個
+                                            </div>
+                                        </div>
+                                        <div id="ing2">
+                                            <div style="align-items: center; display: flex">
+                                                <img src="img/komugi.png" id="ing2-img" class="ingredient-img"/>
+                                                &nbsp;<span id="ing2-have">0</span>/<span id="ing2-need">1</span> 個
+                                            </div>
+                                        </div>
+                                        <div id="ing3">
+                                            <div style="align-items: center; display: flex">
+                                                <img src="img/komugi.png" id="ing3-img" class="ingredient-img"/>
+                                                &nbsp;<span id="ing3-have">0</span>/<span id="ing3-need">1</span> 個
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div style="display: flex; padding-top: 3em">
+                                        <button id="make1" class="make-button">1個作る</button>
+                                        <button id="make10" class="make-button">10個作る</button>
+                                        <button id="makeAll" class="make-button">作れるだけ<br/>作る</button>
+                                    </div>
+                                    <h3 id="makeOpenLvElm">解放レベル: Lv. <span id="makeOpenLv"></span></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="modal_close2">
+                            <div class="modal_background2"></div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="variable.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
