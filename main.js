@@ -1,7 +1,6 @@
 //EventListener
 window.addEventListener('load', function() {
-  console.log('すべてのリソースが読み込まれました');
-  // ここに処理を記述
+  load();
 });
 buyOpen.addEventListener('click', () => {
     buyPage = 1;
