@@ -14,9 +14,10 @@ function load() {
     sold = JSON.parse(localStorage.getItem('soldKey'));
     levelUp = JSON.parse(localStorage.getItem('levelUpKey'));
     buyDisplay = JSON.parse(localStorage.getItem('buyDisplayKey'));
-    makeDislay = JSON.parse(localStorage.getItem('makeDisplayKey'));
+    makeDisplay = JSON.parse(localStorage.getItem('makeDisplayKey'));
   }
 }
+
 
 
 
