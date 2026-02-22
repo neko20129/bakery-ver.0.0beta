@@ -179,18 +179,21 @@ body {
 }
 
 .modal_wrap1 input,
-.modal_wrap2 input{
+.modal_wrap2 input,
+.modal_wrap3 input{
     display: none;
 }
 
 .modal_open-label1,
 .modal_open-label2,
+.modal_open-label3,
 .modal_close-label{
     cursor: pointer;
 }
 
 .modal_open-label1,
-.modal_open-label2{
+.modal_open-label2,
+.modal_open-label3{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -204,12 +207,14 @@ body {
 }
 
 .modal_open-label1:hover,
-.modal_open-label2:hover{
+.modal_open-label2:hover,
+.modal_open-label3:hover{
     filter: brightness(1.5);
 }
 
 .modal1,
-.modal2{
+.modal2,
+.modal3{
     position: fixed;
     left: 0;
     top: 0;
@@ -220,13 +225,15 @@ body {
 }
 
 .modal_open-input1:checked + label + input + .modal1,
-.modal_open-input2:checked + label + input + .modal2{
+.modal_open-input2:checked + label + input + .modal2,
+.modal_open-input3:checked + label + input + .modal3{
     display: block;
     animation: modal-animation .6s;
 }
 
 .modal_content-wrap1,
-.modal_content-wrap2{
+.modal_content-wrap2
+.modal_content-wrap3{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -287,7 +294,8 @@ body {
 }
 
 .modal_content1,
-.modal_content2{
+.modal_content2,
+.modal_content3{
     max-height: 50vh;
     overflow-y: auto;
     padding: 39px 10px 40px;
@@ -295,7 +303,8 @@ body {
 }
 
 .modal_background1,
-.modal_background2{
+.modal_background2,
+.modal_background3{
     position: absolute;
     left: 0;
     top: 0;
@@ -316,23 +325,26 @@ body {
 
 @media only screen and (max-width: 520px) {
     .modal_open-label1,
-    .modal_open-label2,{
+    .modal_open-label2,
+    .modal_open-label3{
         max-width: 90%;
         padding: .94em 2.1em .94em 2.6em;
     }
 
-    .modal_close-label,{
+    .modal_close-label{
         top: -17px;
         right: -4%;
     }
 
     .modal_content-wrap1,
-    .modal_content-wrap2{
+    .modal_content-wrap2,
+    .modal_content-wrap3{
         width: 90vw;
     }
 
     .modal_content1,
-    .modal_content2{
+    .modal_content2,
+    .modal_content3{
         padding: 33px 21px 35px;
         max-width: 100%;
     }
