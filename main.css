@@ -159,7 +159,8 @@ body {
 }
 
 .buy-button,
-.make-button {
+.make-button,
+.setting-button{
     width: 8em;
     height: 6em;
     background-color: #ff7f50;
@@ -174,7 +175,8 @@ body {
 }
 
 .buy-button:hover,
-.make-button:hover {
+.make-button:hover,
+.setting-button:hover{
     filter: brightness(1.5);
 }
 
