@@ -166,7 +166,7 @@ makeAll.addEventListener('click', () => {
     //作れるなら作れる分作る
 });
 
-save.addEventListener('click', () => {
+saveElm.addEventListener('click', () => {
   alert(money+'/'+level+'/'+sold+'/'+levelUp+'/'+JSON.stringify(buyDisplay)+'/'+JSON.stringify(makeDisplay));
 });
 //ゲームループ
