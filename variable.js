@@ -112,6 +112,9 @@ const make1 = document.getElementById('make1');
 const make10 = document.getElementById('make10');
 const makeAll = document.getElementById('makeAll');
 
+const saveElm = document.getElementById('save');
+const loadElm = document.getElementById('load');
+
 const moneyElm1 = document.getElementById('money1');
 const moneyElm2 = document.getElementById('money2');
 
