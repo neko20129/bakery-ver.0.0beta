@@ -168,7 +168,18 @@ makeAll.addEventListener('click', () => {
 
 saveElm.addEventListener('click', () => {
   alert('以下をコピーしてください。出力された値を変更した場合、データが壊れる可能性があります。\n↓\n'+
-        money+'*'+level+'*'+sold+'*'+levelUp+'*'+JSON.stringify(buyDisplay)+'*'+JSON.stringify(makeDisplay));
+        money+'*'+level+'*'+sold+'*'+levelUp+'*'+JSON.stringify(buyDisplay)+'*'+JSON.stringify(makeDisplay)+'^');
+});
+
+loadElm.addEventListener('click', () => {
+  let data = 
+  let moji1 //現在選択している文字
+  let moji2 //現在選択している文字が何番目か
+  while (moji1 === '^') {
+    while (moji1 === '*') {
+      
+    }
+  }
 });
 //ゲームループ
 setInterval(() => {
