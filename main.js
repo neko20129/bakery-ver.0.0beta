@@ -172,14 +172,36 @@ saveElm.addEventListener('click', () => {
 });
 
 loadElm.addEventListener('click', () => {
-  let data = 
-  let moji1 //現在選択している文字
-  let moji2 //現在選択している文字が何番目か
-  while (moji1 === '^') {
-    while (moji1 === '*') {
-      
-    }
-  }
+  let data = prompt('セーブデータを入力してください');
+  let moji = 0; //現在選択している文字が何番目か
+  let item = 1; //選択している項目が何番目か
+  money = '';
+  level = '';
+  sold = '';
+  levelUp = '';
+  buyDisplay = '';
+  makeDisplay = '';
+  
+  while (data[moji] === '^') {
+    while (data[moji] === '*') {
+      switch (item) {
+        case 1:
+          money = `${money}${data[moji]}`;
+        case 2:
+          level = `${level}${data[moji]}`;
+        case 3:
+          sold = `${sold}${data[moji]}`;
+        case 4:
+          levelUp = `${levelUp}${data[moji]}`;
+        case 5:
+          buyDisplay = `${buyDisplay}${data[moji]}`;
+        case 6:
+          makeDisplay = `${makeDisplay}${data[moji]}`;
+      };
+      moji++;
+    };
+    item++;
+  };
 });
 //ゲームループ
 setInterval(() => {
