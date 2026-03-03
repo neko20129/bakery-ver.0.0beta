@@ -178,6 +178,7 @@ loadElm.addEventListener('click', () => {
     [money, level, sold, levelUp, buyDisplay, makeDisplay] = items;
     buyDisplay = JSON.parse(buyDisplay);
     makeDisplay = JSON.parse(makeDisplay);
+    alert('ロードに成功しました！');
   } else {
     alert('エラー: セーブデータを解析できません');
   }
