@@ -65,7 +65,6 @@ const table2_7_num = document.getElementById('table2-7_num');
 const table2_8_num = document.getElementById('table2-8_num');
 const table2_9_num = document.getElementById('table2-9_num');
 
-
 const buyOpen = document.getElementById('modal_open1');
 const makeOpen = document.getElementById('modal_open2');
 
