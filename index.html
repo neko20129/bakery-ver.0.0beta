@@ -201,18 +201,41 @@
                 <div class="modal_wrap3">
                     <input type="radio" id="modal_open3" class="modal_open-input3" name="modal_trigger"/>
                     <label for="modal_open3" class="modal_open-label3">
-                        <img src="img/settings.png" class="button-img" />
+                        <img src="img/upgrade.png" class="button-img" />
                     </label>
                     <input type="radio" id="modal_close3" name="modal_trigger"/>
                     <div class="modal3">
                         <div class="modal_content-wrap3">
                             <label for="modal_close3" class="modal_close-label">×</label>
-                            <div class="modal_content3">
-                                <div style="flex-direction: column;">
-                                    <div style="top: 0; left: -1px; position: fixed; width: 100%; text-align: center"><h2>設定</h2></div>
-                                    <div style="display: flex; margin-top: 30px">
-                                        <button class="setting-button" id="save">セーブコードを<br>発行</button>
-                                        <button class="setting-button" id="load">ロードする</button>
+                            <div class="modal_content3" style="display: flex; justify-content: center">
+                                <div class="content-area">
+                                    <h2 id="upgrade-content1">チラシ配り</h2>
+                                    <h3 style="margin-bottom: 0">客がより多く来ます<br/></h3><br/><br/>
+                                    <h3 style="margin: 0">Lv. <span id="upgradeLv-1"></span></h3>
+                                    <h3>解放レベル: <span id="upgrade-unlock-Lv-1"></span></h3>
+                                    <h3>値段: Ü<span id="upgrade-need1"></span></h3>
+                                    <div style="display: flex; justify-content: center">
+                                        <button id="upgrade-button1" class="upgrade-button" style="margin-bottom: 0">レベルアップ</button>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                    <h2 id="upgrade-content2">美味しいパン</h2>
+                                    <h3 style="margin-bottom: 0">パンを多く買う人が<br/>増えます</h3><br/>
+                                    <h3 style="margin: 0">Lv. <span id="upgradeLv-2"></span></h3>
+                                    <h3>解放レベル: <span id="upgrade-unlock-Lv-2"></span></h3>
+                                    <h3>値段: Ü<span id="upgrade-need2"></span></h3>
+                                    <div style="display: flex; justify-content: center">
+                                        <button id="upgrade-button2" class="upgrade-button" style="margin-bottom: 0">レベルアップ</button>
+                                    </div>
+                                </div>
+                                <div class="content-area">
+                                    <h2 id="upgrade-content3">黒字</h2>
+                                    <h3 style="margin-bottom: 0">パンを売ったときの<br/>利益が増えます</h3><br/>
+                                    <h3 style="margin: 0">Lv. <span id="upgradeLv-3"></span></h3>
+                                    <h3>解放レベル: <span id="upgrade-unlock-Lv-3"></span></h3>
+                                    <h3>値段: Ü<span id="upgrade-need3"></span></h3>
+                                    <div style="display: flex; justify-content: center">
+                                        <button id="upgrade-button3" class="upgrade-button" style="margin-bottom: 0">レベルアップ</button>
                                     </div>
                                 </div>
                             </div>
@@ -222,8 +245,32 @@
                         </label>
                     </div>
                 </div>
+
+                <div class="modal_wrap4">
+                    <input type="radio" id="modal_open4" class="modal_open-input4" name="modal_trigger"/>
+                    <label for="modal_open4" class="modal_open-label4">
+                        <img src="img/settings.png" class="button-img" />
+                    </label>
+                    <input type="radio" id="modal_close4" name="modal_trigger"/>
+                    <div class="modal4">
+                        <div class="modal_content-wrap4">
+                            <label for="modal_close4" class="modal_close-label">×</label>
+                            <div class="modal_content4">
+                                <div>
+                                    <div style="top: 0; left: -1px; position: fixed; width: 100%; text-align: center"><h2>設定</h2></div>
+                                    <div style="display: flex; margin-top: 30px">
+                                        <button class="setting-button" id="save">セーブコードを<br>発行</button>
+                                        <button class="setting-button" id="load">ロードする</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="modal_close4">
+                            <div class="modal_background4"></div>
+                        </label>
+                    </div>
+                </div>
             </div>
-        </div>
         <script src="variable.js"></script>
         <script src="storage_system.js"></script>
         <script src="main.js"></script>
