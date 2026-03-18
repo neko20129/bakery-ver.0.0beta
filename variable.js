@@ -102,14 +102,49 @@ const ing3_need = document.getElementById('ing3-need');
 const buy1 = document.getElementById('buy1');
 const buy10 = document.getElementById('buy10');
 const buyAll = document.getElementById('buyAll');
-
 const sell1 = document.getElementById('sell1');
 const sell10 = document.getElementById('sell10');
 const sellAll = document.getElementById('sellAll');
-
 const make1 = document.getElementById('make1');
 const make10 = document.getElementById('make10');
 const makeAll = document.getElementById('makeAll');
+
+const upgradeL1 = document.getElementById('upgradeLv-1');
+const upgradeL2 = document.getElementById('upgradeLv-2');
+const upgradeL3 = document.getElementById('upgradeLv-3');
+const upgradeUL1 = document.getElementById('upgrade-unlock-Lv-1');
+const upgradeUL2 = document.getElementById('upgrade-unlock-Lv-2');
+const upgradeUL3 = document.getElementById('upgrade-unlock-Lv-3');
+const upgradeB1 = document.getElementById('upgrade-button1');
+const upgradeB2 = document.getElementById('upgrade-button2');
+const upgradeB3 = document.getElementById('upgrade-button3');
+const upgradeN1 = document.getElementById('upgrade-need1');
+const upgradeN2 = document.getElementById('upgrade-need2');
+const upgradeN3 = document.getElementById('upgrade-need3');
+
+const rank1 = document.getElementById('rank1');
+const rank2 = document.getElementById('rank2');
+const rank3 = document.getElementById('rank3');
+const rank4 = document.getElementById('rank4');
+const rank5 = document.getElementById('rank5');
+
+const name1 = document.getElementById('name1');
+const name2 = document.getElementById('name2');
+const name3 = document.getElementById('name3');
+const name4 = document.getElementById('name4');
+const name5 = document.getElementById('name5');
+
+const level1 = document.getElementById('level1');
+const level2 = document.getElementById('level2');
+const level3 = document.getElementById('level3');
+const level4 = document.getElementById('level4');
+const level5 = document.getElementById('level5');
+
+const money1 = document.getElementById('money1');
+const money2 = document.getElementById('money2');
+const money3 = document.getElementById('money3');
+const money4 = document.getElementById('money4');
+const money5 = document.getElementById('money5');
 
 const saveElm = document.getElementById('save');
 const loadElm = document.getElementById('load');
@@ -144,10 +179,17 @@ let buyDisplay = [
 let makeDisplay = [
     [null],
     [['パン'],[[1],[1]],[[0],[0]],[[0],[0]],[45],['img/pan.png'],[0],[1]],
-    [['アンパン'],[[1],[2]],[[2],[1]],[[0],[0]],[130],['img/anpan.png'],[0],[1]],
+    [['あんぱん'],[[1],[2]],[[2],[1]],[[0],[0]],[130],['img/anpan.png'],[0],[1]],
     [['チョココロネ'],[[1],[1]],[[3],[1]],[[0],[0]],[270],['img/korone.png'],[0],[2]],
     [['クリームパン'],[[1],[1]],[[4],[1]],[[5],[1]],[440],['img/kurimu.png'],[0],[2]],
     [['ウシジマパン'],[[1],[3]],[[6],[2]],[[7],[1]],[760],['img/ushijima.png'],[0],[3]],
     [['塩パン'],[[1],[1]],[[7],[1]],[[8],[1]],[810],['img/siopan.png'],[0],[4]],
     [['ベーグル'],[[1],[2]],[[6],[2]],[[9],[1]],[1080],['img/beguru.png'],[0],[4]]
+];
+
+let upgradeDisplay = [
+    [null],
+    [['チラシ配り'],[1],[3],[540]],
+    [['美味しいパン'],[1],[6],[920]],
+    [['黒字'],[1],[11],[1080]]
 ];
