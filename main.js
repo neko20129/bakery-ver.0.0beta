@@ -1146,6 +1146,7 @@ function dataForSend() {
 }
 
 window.dataForSend = dataForSend();
+window.clearData = clearData();
 window.addEventListener('load', () => {
     dataForSend();
 });
