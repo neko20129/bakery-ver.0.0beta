@@ -133,19 +133,19 @@ const loadElm = document.getElementById('load');
 const moneyElm1 = document.getElementById('money1');
 const moneyElm2 = document.getElementById('money2');
 
-let money = 115;
-let level = 1;
-let sold = 0;
-let levelUp = 4;
+let money = localStorage.getItem('money') ?? 115;
+let level = localStorage.getItem('level') ?? 1;
+let sold = localStorage.getItem('sold') ?? 0;
+let levelUp = localStorage.getItem('levelUp') ?? 4;
 let buyPage = 1;
 let makePage = 1;
-let profit = 0;
+let profit = localStorage.getItem('profit') ?? 0; //累計利益
 
-let bakeryName
+let bakeryName;
 
 //配列
 //buy = [材料名],[値段],[画像ファイル],[持っている数],[解放レベル]
-let buyDisplay = [
+let buyDisplay = JSON.parse(localStorage.getItem('buyDisplay')) ?? [
     [null],
     [['小麦'],[30],['img/komugi.png'],[0],[1]],
     [['小豆'],[50],['img/azuki.png'],[0],[1]],
@@ -161,7 +161,7 @@ let buyDisplay = [
 
 /*make =[名前],[[材料の種類],[材料の数]],[[材料の種類],[材料の数]],[[材料の種類],[材料の数]],
 [収入],[画像ファイル],[所持数],[解放レベル]*/
-let makeDisplay = [
+let makeDisplay = JSON.parse(localStorage.getItem('makeDisplay')) ?? [
     [null],
     [['パン'],[[1],[1]],[[0],[0]],[[0],[0]],[45],['img/pan.png'],[0],[1]],
     [['あんぱん'],[[1],[2]],[[2],[1]],[[0],[0]],[130],['img/anpan.png'],[0],[1]],
@@ -174,7 +174,7 @@ let makeDisplay = [
     [['イタリアンピザ'],[[1],[2]],[[5],[1]],[[10],[1]],[1380],['img/piza.png'],[0],[6]]
 ];
 
-let upgradeDisplay = [
+let upgradeDisplay = JSON.parse(localStorage.getItem('upgradeDisplay')) ?? [
     [null],
     [['チラシ配り'],[1],[3],[540]],
     [['美味しいパン'],[1],[6],[920]],
@@ -188,34 +188,13 @@ function save() {
   localStorage.setItem('soldKey',sold);
   localStorage.setItem('levelUpKey',levelUp);
   localStorage.setItem('profitKey',profit);
-  localStorage.setItem('bakerynameKey',bakeryName)
+  localStorage.setItem('bakerynameKey',bakeryName);
   localStorage.setItem('buyDisplayKey',JSON.stringify(buyDisplay));
   localStorage.setItem('makeDisplayKey',JSON.stringify(makeDisplay));
   localStorage.setItem('upgradeDisplayKey',JSON.stringify(upgradeDisplay));
   dataForSend();
 }
 
-function load() {
-  if (localStorage.getItem('moneyKey') && localStorage.getItem('levelKey') && localStorage.getItem('soldKey') && localStorage.getItem('levelUpKey') && localStorage.getItem('profitKey') &&localStorage.getItem('buyDisplayKey') && localStorage.getItem('makeDisplayKey') && localStorage.getItem('upgradeDisplayKey')) {
-    money = JSON.parse(localStorage.getItem('moneyKey'));
-    level = JSON.parse(localStorage.getItem('levelKey'));
-    sold = JSON.parse(localStorage.getItem('soldKey'));
-    levelUp = JSON.parse(localStorage.getItem('levelUpKey'));
-    profit = JSON.parse(localStorage.getItem('profitKey'));
-    bakeryName = JSON.parse(localStorage.getItem('bakeryNameKey'))
-    buyDisplay = JSON.parse(localStorage.getItem('buyDisplayKey'));
-    makeDisplay = JSON.parse(localStorage.getItem('makeDisplayKey'));
-    upgradeDisplay = JSON.parse(localStorage.getItem('upgradeDisplayKey'));
-    dataForSend();
-  } else {
-      clearData();
-  }
-}
-
-//EventListener
-window.addEventListener('load', () => {
-  load();
-});
 
 buyOpen.addEventListener('click', () => {
     buyPage = 1;
