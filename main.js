@@ -141,6 +141,7 @@ let buyPage = 1;
 let makePage = 1;
 let profit = localStorage.getItem('profit') ?? 0; //累計利益
 
+let uniqueId;
 let bakeryName;
 
 //配列
@@ -1103,7 +1104,7 @@ function library1(e) {
 }
 
 function dataForSend() {
-    let uniqueId = localStorage.getItem('uniqueId');
+    uniqueId = localStorage.getItem('uniqueId');
     if (!uniqueId) {
         uniqueId = Math.random().toString(36).slice(-16)
         localStorage.setItem('uniqueId', uniqueId);
