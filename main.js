@@ -141,7 +141,8 @@ let buyPage = 1;
 let makePage = 1;
 let profit = 0;
 
-let bakeryName
+let uniqueId;
+let bakeryName;
 
 //配列
 //buy = [材料名],[値段],[画像ファイル],[持っている数],[解放レベル]
@@ -505,7 +506,12 @@ loadElm.addEventListener('click', async () => {
 
 document.getElementById('change-name').addEventListener('click', () => {
     const prom = prompt('あなたのベーカリーの名前はなんですか？');
-    if (prom) bakeryName = prom;
+    if (prom) {
+        bakeryName = prom;
+        alert('ベーカリーの名前を' + bakeryName + 'に変更しました');
+        localStorage.setItem('bakeryNameKey', bakeryName);
+        sendDataToSheets([uniqueId, bakeryName, level, money, profit, all]);
+    };
 })
 
 document.getElementById('ranking').addEventListener('click', () => {if (confirm('別のランキングページが新しいタブで開かれます\nよろしいですか？')) window.open('https://docs.google.com/spreadsheets/d/1q726CiPRmO2ZD2cUisHE-UDBfvba7ikVEhZSwUGeTEM/edit?gid=0#gid=0', '_blank', 'noopener,noreferrer')});
@@ -1126,7 +1132,7 @@ function library1(e) {
 }
 
 function dataForSend() {
-    let uniqueId = localStorage.getItem('uniqueId');
+    uniqueId = localStorage.getItem('uniqueId');
     if (!uniqueId) {
         uniqueId = Math.random().toString(36).slice(-16)
         localStorage.setItem('uniqueId', uniqueId);
