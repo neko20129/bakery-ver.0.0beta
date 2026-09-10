@@ -143,6 +143,7 @@ let profit = localStorage.getItem('profit') ?? 0; //累計利益
 
 let uniqueId;
 let bakeryName;
+let all;
 
 //配列
 //buy = [材料名],[値段],[画像ファイル],[持っている数],[解放レベル]
@@ -510,11 +511,11 @@ let timeToExecution = 300;
 myWorker.onmessage = function(e) {
   if (e.data === 'tick') {
         reloadOfDisplay();
-        const having = makeDisplay[1][6] + makeDisplay[2][6] + makeDisplay[3][6] + makeDisplay[4][6] +
+        all = makeDisplay[1][6] + makeDisplay[2][6] + makeDisplay[3][6] + makeDisplay[4][6] +
             makeDisplay[5][6] + makeDisplay[6][6] + makeDisplay[7][6] + makeDisplay[8][6] + makeDisplay[9][6];
         const n = Math.floor(
             Math.random() * (1250 - //倍率定数
-            having * 1.1 - //所持数倍率
+            all * 1.1 - //所持数倍率
             upgradeDisplay[1][1] * 2.12 - //アップグレード倍率
             level * 1.25 //レベル倍率
             )
