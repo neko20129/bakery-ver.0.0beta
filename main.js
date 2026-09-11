@@ -472,7 +472,15 @@ saveElm.addEventListener('click', async () => {
         upgradeDisplay[3][1]
     ]
 
-    const saveData = { money, level, sold, levelUp, buyDispHas, makeDispHas, upgradeDispHas };
+    const saveData = { 
+        'money': money,
+        'level': level,
+        'sold': sold,
+        'levelUp': levelUp,
+        'buyDispHas': buyDispHas,
+        'makeDispHas': makeDispHas,
+        'upgradeDispHas': upgradeDispHas
+    };
     console.log(saveData);
     const compressed = JSON.stringify(saveData);
     await navigator.clipboard.writeText(compressed);
@@ -481,7 +489,29 @@ saveElm.addEventListener('click', async () => {
 });
 
 loadElm.addEventListener('click', async () => {
-  const input = prompt('セーブデータを入力');
+    const input = prompt('セーブデータを入力');
+    const saveData = JSON.parse(input);
+    money = saveData.money;
+    level = saveData.level;
+    sold = saveData.sold;
+    levelUp = saveData.levelUp;
+    const buyDispHas = saveData.buyDispHas;
+    const makeDispHas = saveData.makeDispHas;
+    const upgradeDispHas = saveData.upgradeDispHas;
+
+    for (let i = 1; i <= buyDisplay.length - 1; i++) {
+        buyDisplay[i][3] = buyDisplay[i][3] ? buyDispHas[i - 1] : 0;
+    }
+
+    for (let i = 1; i <= makeDisplay.length - 1; i++) {
+        makeDisplay[i][6] = makeDisplay[i][6] ? makeDispHas[i - 1] : 0;
+    }
+
+    for (let i = 1; i <= upgradeDisplay.length - 1; i++) {
+        upgradeDisplay[i][1] = upgradeDisplay[i][1] ? upgradeDispHas[i - 1] : 0;
+    }
+
+    save();
 });
 
 document.getElementById('change-name').addEventListener('click', () => {
@@ -507,7 +537,6 @@ const workerUrl = URL.createObjectURL(blob);
 
 const myWorker = new Worker(workerUrl);
 let timer = 0;
-let timeToExecution = 300;
 myWorker.onmessage = function(e) {
   if (e.data === 'tick') {
         reloadOfDisplay();
