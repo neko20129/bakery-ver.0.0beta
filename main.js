@@ -511,6 +511,7 @@ loadElm.addEventListener('click', async () => {
         upgradeDisplay[i][1] = upgradeDisplay[i][1] ? upgradeDispHas[i - 1] : 0;
     }
 
+    console.log(saveData);
     save();
 });
 
